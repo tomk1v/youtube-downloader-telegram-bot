@@ -1,11 +1,11 @@
-const { Telegraf } = require('telegraf');
+const { Composer, filter } = require('telegraf');
 const ytdl = require('ytdl-core');
 const axios = require('axios');
 
 // Replace 'YOUR_BOT_TOKEN' with your actual token
 const BOT_TOKEN = 'YOUR_BOT_TOKEN';
 
-const bot = new Telegraf(BOT_TOKEN);
+const bot = new Composer(BOT_TOKEN);
 
 bot.start((ctx) => {
   ctx.reply('Welcome to the YouTube Audio Bot by tomk1v! Send a YouTube link to fetch audio.');
@@ -16,7 +16,7 @@ async function downloadImage(url) {
   return Buffer.from(response.data, 'binary');
 }
 
-bot.on('text', async (ctx) => {
+bot.hears(filter.text, async (ctx) => {
   const url = ctx.message.text;
 
   try {
