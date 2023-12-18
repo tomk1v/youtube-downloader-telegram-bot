@@ -24,6 +24,9 @@ This is a Telegram bot that allows users to fetch audio from YouTube videos and 
 
 2. Send a YouTube link to the bot to fetch the audio.
 
+   ![Screenshot from 2023-12-18 10-33-13](https://github.com/tomk1v/youtube-downloader-telegram-bot/assets/91790934/18154668-d550-42c6-9711-e374ec6b0317)
+
+
 ## Features
 
 - Downloads the highest quality audio stream from YouTube.
